@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ネクバン｜スマホで完結する新しいバンキング</title>
+    <meta name="description" content="ネクバン（NexBank）は、スマホで完結する新しいネット銀行。安心・シンプル・手数料ゼロで、はじめての資産管理にぴったりのサービスです。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSSリセット -->
+    <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- カルーセル -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- CSSファイル -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-wrapper"><!-- ロゴ -->
+            <h1 class="header-logo">
+                <a href="/" aria-label="ネクバン トップへ">
+                    <img src="images/header_nextbank_logo_rgb.svg" alt="">
+                </a>
+            </h1>
+            <!-- ログイン＆新規登録ボタン -->
+            <nav class="pc-nav">
+                <ul class="pc-nav-btn">
+                    <li><a class="pc-nav-btn-login" href="#" onclick="return false;">ログイン</a></li>
+                    <li><a class="pc-nav-btn-account" href="#" onclick="return false;">無料で登録する</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ハンバーガーメニュー（SP） -->
+        <div class="hamburger-wrapper">
+            <button class="hamburger-btn" aria-label="メニューを開く">
+                <i class="bi bi-list"></i>
+            </button>
+            <nav class="hamburger-nav">
+                <ul>
+                    <li><a class="pc-nav-btn-login" href="/login/">ログイン</a></li>
+                    <li><a class="pc-nav-btn-account" href="/account/">無料で登録する</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- カバー（heroセクション） -->
+    <section class="hero">
+        <!-- カルーセル -->
+        <div class="hero-slick">
+            <!-- 1枚目 -->
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/hero_sp_1.jpg">
+                <img src="images/hero_pc_1.jpg" alt="">
+            </picture>
+            <!-- 2枚目 -->
+            <picture>
+                <source media="(max-width: 767px)" srcset="images/hero_sp_2.jpg">
+                <img src="images/hero_pc_2.jpg" alt="">
+            </picture>
+        </div>
+        <!-- リードとボタン -->
+        <div class="hero-text-wrapper">
+            <h2 class="hero-copy">口座開設から投資まで、<br>すべてオンラインで完結。</h2>
+            <p class="hero-sub">スマートな画面とシンプルな操作で、<br>はじめての人にもやさしいネット銀行。</p>
+            <a class="hero-btn-account" href="/account/">無料で口座開設</a>
+        </div>
+        <!-- 個人or法人ボタン -->
+        <div class="hero-cta">
+            <div class="cta-buttons">
+                <a href="/individual/" class="cta-btn-individual"><span>個人のお客様</span></a>
+                <a href="/business/" class="cta-btn-business"><span>法人のお客様</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- カテゴリー -->
+    <section class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="services-title">ネクバンの4つのできること</h2>
+            <p class="services-lead">日々の入出金から資産づくりまで。オンラインで完結。</p>
+            <!-- 4つのできることリスト -->
+            <ul class="services-list">
+                <!-- 口座・決済 -->
+                <li>
+                    <a href="/features/account/" class="service-card" aria-label="口座・決済の詳細へ">
+                        <div class="service-head">
+                            <i class="bi bi-wallet2" aria-hidden="true"></i>
+                            <h3>口座・決済</h3>
+                        </div>
+                        <p>口座開設は最短当日。振込・入出金・QR決済に対応。</p>
+                    </a>
+                </li>
+                <!-- 貯蓄・投資 -->
+                <li>
+                    <a href="/features/invest/" class="service-card" aria-label="貯蓄・投資の詳細へ">
+                        <div class="service-head">
+                            <i class="bi bi-graph-up" aria-hidden="true"></i>
+                            <h3>貯蓄・投資</h3>
+                        </div>
+                        <p>定期預金・投資信託を1つのアプリで管理。積立設定も簡単。</p>
+                    </a>
+                </li>
+                <!-- セキュリティ -->
+                <li>
+                    <a href="/features/invest/" class="service-card" aria-label="セキュリティの詳細へ">
+                        <div class="service-head">
+                            <i class="bi bi-shield-check" aria-hidden="true"></i>
+                            <h3>セキュリティ</h3>
+                        </div>
+                        <p>二要素認証・生体認証・不正検知で安全に。万一のロックも即対応。</p>
+                    </a>
+                </li>
+                <!-- サポート -->
+                <li>
+                    <a href="/support/" class="service-card" aria-label="サポートの詳細へ">
+                        <div class="service-head">
+                            <i class="bi bi-chat-dots" aria-hidden="true"></i>
+                            <h3>サポート</h3>
+                        </div>
+                        <p>チャットとメールで年中無休。画面ガイドで迷わず操作。</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- ニュースリリース お知らせ -->
+    <div class="tab-area">
+
+        <div id="smarttab" class="tab st-theme-basic">
+            <!-- タブボタン -->
+            <ul class="nav" role="tablist">
+                <li><a class="nav-link" href="#panel-release">ニュースリリース</a></li>
+                <li><a class="nav-link" href="#panel-news">お知らせ</a></li>
+            </ul>
+
+            <!-- タブコンテンツ -->
+            <div class="tab-content">
+                <!-- ニュースリリース -->
+                <div id="panel-release" class="tab-pane" role="tabpanel">
+                    <!-- ニュース一覧 -->
+                    <ul class="news-list">
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年03月18日</div>
+                                <a href="/news0818/" class="news-link">【新サービス】AIによる運用提案サービスの提供開始について</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年03月16日</div>
+                                <a href="/news0816/" class="news-link">【新規取扱】暗号資産（ビットコイン等）の取扱開始について</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年03月02日</div>
+                                <a href="/news0802/" class="news-link">【新商品】少額から始められる定期預金の取扱開始について</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年02月12日</div>
+                                <a href="/news0712/" class="news-link">【新機能】スマートフォンアプリに生体認証ログイン機能を追加</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年02月05日</div>
+                                <a href="/news0605/" class="news-link">【更新】口座開設手続きのオンライン完結化および即日開設対応について</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- ニュースリリース一覧へボタン -->
+                    <a class="btn-news-link" href="/news/">ニュースリリース一覧へ</a>
+                </div>
+
+                <!-- お知らせ -->
+                <div id="panel-news" class="tab-pane" role="tabpanel">
+                    <!-- お知らせ一覧 -->
+                    <ul class="notice-list">
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年03月23日</div>
+                                <a href="/notice0823/" class="notice-link">【重要】日本銀行の金利政策変更に伴う当行金利の変更について</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年03月10日</div>
+                                <a href="/notice0710/" class="notice-link">【更新】スマートフォンアプリ最新版のリリースについて</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年02月21日</div>
+                                <a href="/notice0621/" class="notice-link">【イベント】投資セミナー開催のお知らせ</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年02月01日</div>
+                                <a href="/notice0401/" class="notice-link">【キャンペーン】外貨預金口座開設キャンペーン開始のお知らせ</a>
+                            </div>
+                        </li>
+                        <li class="news-item">
+                            <div class="news-box">
+                                <div class="news-date">2026年02月18日</div>
+                                <a href="/notice0318/" class="notice-link">【お知らせ】ゴールデンウィーク期間中の営業時間について</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- お知らせ一覧へボタン -->
+                    <a class="btn-notice-link" href="/notice/">お知らせ一覧へ</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- キャンペーン カルーセル-->
+    <section class="campaign">
+        <h3 class="campaign-title">キャンペーン</h3>
+
+        <!-- ★ PC用 Swiper（768px以上で表示） -->
+        <div class="swiper campaign-swiper-pc">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/campaign01/" class="card">
+                        <div class="card-img"><img src="images/campaign_01.png" alt=""></div>
+                        <p class="card-text">初めての口座開設で1万円プレゼントキャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign02/" class="card">
+                        <div class="card-img"><img src="images/campaign_02.png" alt=""></div>
+                        <p class="card-text">幸せを運ぶ！デジタル定期預金5%増額キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign03/" class="card">
+                        <div class="card-img"><img src="images/campaign_03.png" alt=""></div>
+                        <p class="card-text">未来を胸に抱こう！長期投資信託キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign04/" class="card">
+                        <div class="card-img"><img src="images/campaign_04.png" alt=""></div>
+                        <p class="card-text">海外旅行準備はきらめき銀行で！外貨預金特別利率キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign05/" class="card">
+                        <div class="card-img"><img src="images/campaign_05.png" alt=""></div>
+                        <p class="card-text">夢に向かってステップアップ！学生限定ローンキャンペーン</p>
+                    </a>
+                </div>
+            </div>
+            <!-- ナビゲーション -->
+            <div class="swiper-btn-prev"><i class="bi bi-arrow-left-short"></i></div>
+            <div class="swiper-btn-next"><i class="bi bi-arrow-right-short"></i></div>
+            <!-- ページネーション -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- ★ SP用 Swiper（767px以下で表示） -->
+        <div class="swiper campaign-swiper-sp">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="/campaign01/" class="card">
+                        <div class="card-img"><img src="images/campaign_01.png" alt=""></div>
+                        <p class="card-text">初めての口座開設で1万円プレゼントキャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign02/" class="card">
+                        <div class="card-img"><img src="images/campaign_02.png" alt=""></div>
+                        <p class="card-text">幸せを運ぶ！デジタル定期預金5%増額キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign03/" class="card">
+                        <div class="card-img"><img src="images/campaign_03.png" alt=""></div>
+                        <p class="card-text">未来を胸に抱こう！長期投資信託キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign04/" class="card">
+                        <div class="card-img"><img src="images/campaign_04.png" alt=""></div>
+                        <p class="card-text">海外旅行準備はきらめき銀行で！外貨預金特別利率キャンペーン</p>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="/campaign05/" class="card">
+                        <div class="card-img"><img src="images/campaign_05.png" alt=""></div>
+                        <p class="card-text">夢に向かってステップアップ！学生限定ローンキャンペーン</p>
+                    </a>
+                </div>
+            </div>
+            <!-- ナビゲーション -->
+            <div class="swiper-btn-prev-sp"><i class="bi bi-arrow-left-short"></i></div>
+            <div class="swiper-btn-next-sp"><i class="bi bi-arrow-right-short"></i></div>
+            <!-- ページネーション -->
+            <div class="swiper-pagination swiper-pagination-sp"></div>
+        </div>
+
+    </section>
+
+
+    <!-- ネクバンについて 採用情報 ボタン-->
+    <div class="info">
+        <div class="info-buttons">
+            <a href="/aboutus/" class="info-btn">
+                <span class="info-btn-text">ネクバンについて</span>
+                <i class="bi bi-arrow-right-short"></i>
+            </a>
+            <a href="/employment/" class="info-btn">
+                <span class="info-btn-text">採用情報</span>
+                <i class="bi bi-arrow-right-short"></i>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ご注意 -->
+    <section class="caution">
+
+        <div class="caution-wrapper">
+            <div class="caution-head">
+                <i class="bi bi-exclamation-circle"></i>
+                <h4><span class="caution-title-top">不正利用・詐欺に</span>
+                    ご注意ください</h4>
+            </div>
+            <div class="caution-info">
+                <ul class="caution-info-list">
+                    <li>
+                        <a href="/security01/" class="caution-info-btn">
+                            <i class="bi bi-arrow-right-short"></i>
+                            <span class="caution-info-btn-text">還付金詐欺にご注意ください</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/security02/" class="caution-info-btn">
+                            <i class="bi bi-arrow-right-short"></i>
+                            <span class="caution-info-btn-text">フィッシング詐欺にご注意ください</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/security03/" class="caution-info-btn">
+                            <i class="bi bi-arrow-right-short"></i>
+                            <span class="caution-info-btn-text">特殊詐欺（電話詐欺）にご注意ください</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/attention/" class="caution-info-btn">
+                            <i class="bi bi-arrow-right-short"></i>
+                            <span class="caution-info-btn-text">お客さまへのお願い（安全なお取引のために）</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+
+        <nav class="footer-nav">
+            <ul class="footer-nav-list">
+                <li><a href="/individual/" class="footer-nav-list-text">個人のお客様</a></li>
+                <li><a href="/business/" class="footer-nav-list-text">法人・個人事業主のお客様</a></li>
+                <li><a href="/aboutus/" class="footer-nav-list-text">ネクバンについて</a></li>
+                <li><a href="/ir/" class="footer-nav-list-text">株主・投資家の皆さま</a></li>
+                <li><a href="/employment/" class="footer-nav-list-text">採用情報</a></li>
+                <li><a href="/support/" class="footer-nav-list-text">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Smart Tab -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
